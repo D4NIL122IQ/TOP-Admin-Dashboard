@@ -9,7 +9,7 @@
 .view{
     width: 100vw;
     display:grid;
-    grid-template-columns: 300px repeat(3,1fr);
+    grid-template-columns: 250px repeat(3,1fr);
     grid-template-rows: repeat(1,200px) repeat(4,200px);
     font-family: "Roboto", sans-serif;
     font-weight: 300;
@@ -87,6 +87,9 @@ input{
     align-items: stretch;
     justify-content: space-around;
 }
+.information{
+    text-transform: none;
+}
 .hi{
     margin-top: 30px;
 }
@@ -114,23 +117,25 @@ input{
     grid-row-start: 2;
     grid-row-end:6;
     padding: 10px;
-}
-
-.board{
+    gap: 40px;
     display: grid;
-    grid-template: auto 1fr / 2fr minmax(300px, 1fr);
+    grid-template-columns: repeat(1,minmax(400,1fr)) 100px;
+    grid-template-rows: repeat(2,400px);
+    /* grid-template: auto 1fr / 2fr minmax(300px, 1fr); */
 }
-
+.project , .anno {
+    margin-top: 30px;
+}
 .card-container{ 
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 1;
     grid-row-start: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
     grid-template-rows: repeat(2,200px);
     gap: 40px;
-    margin-top: 40px;
-    margin-left: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .card{
@@ -139,9 +144,7 @@ input{
     box-shadow: 0px 0px 3px 0px #0c0c0c; 
     border-left: #fb8600 solid 10px;
 }
-.card:hover{
-    box-shadow: 0px 0px 10px 0px #0c0c0c;
-}
+
 .text , .title{
     margin:10px;
 }
@@ -159,27 +162,36 @@ button:hover{
     zoom: 1.1;
 }
 
-
 .annoucements{
-    grid-column-start: 4;
-    grid-column-end: 4;
+    grid-column-start: 2;
     grid-row-start: 1;
-    grid-row-end: 1;
-    background-color: aqua;
-    /* width: 300px; */
-   
-    margin-top: 40px;
-  
+    background-color: white;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+    width: 250px;
+    margin-right: 10px;
+    box-shadow: 0px 4px 12px black;
 } 
 
+.text-anno{
+    padding: 6px;
+}
+#last{
+    border-bottom: none;
+}
 .text-anno{
     border-bottom: 1px solid black;
 }
 
+
 .trending{
-    grid-column-start: 3;
-    grid-column-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 2;
     grid-row-start: 2;
+    grid-row-end: 2;
 }
 
 .profil-add{
@@ -187,10 +199,17 @@ button:hover{
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 0px 4px 12px black;
+    height: 300px;
+    width: 250px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 .pers{
     display: flex;
     align-items: center;
     text-transform: none;
 }
-
+.profil-add:hover , .annoucements:hover,.card:hover{
+    box-shadow: 0px 4px 20px black;
+}
