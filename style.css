@@ -113,7 +113,7 @@ input{
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end:6;
-    margin: 10px;
+    padding: 10px;
 }
 
 .board{
@@ -127,19 +127,17 @@ input{
     grid-row-start: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
-    grid-template-rows: max-content;
+    grid-template-rows: repeat(2,200px);
     gap: 40px;
-    margin: 20px;
+    margin-top: 40px;
+    margin-left: 30px;
 }
 
 .card{
- background-color: #fff;
-    display: flex;
-    flex-direction: column;
+    background-color: #fff;
     border-radius: 10px;
-     box-shadow: 0px 0px 3px 0px #0c0c0c; 
+    box-shadow: 0px 0px 3px 0px #0c0c0c; 
     border-left: #fb8600 solid 10px;
-    
 }
 .card:hover{
     box-shadow: 0px 0px 10px 0px #0c0c0c;
@@ -159,22 +157,40 @@ button{
 }
 button:hover{
     zoom: 1.1;
-    box-shadow:inset 0px 0px 14px 0px #fb8600;
 }
- .anno{
+
+
+.annoucements{
     grid-column-start: 4;
     grid-column-end: 4;
     grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-end: 1;
     background-color: aqua;
-    width: 150px;
-    height: 100px;
+    /* width: 300px; */
+   
+    margin-top: 40px;
+  
 } 
 
+.text-anno{
+    border-bottom: 1px solid black;
+}
+
 .trending{
-    grid-column-start: 4;
-    grid-column-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 3;
     grid-row-start: 2;
-    grid-row-end: 3;
+}
+
+.profil-add{
+    border: 1px solid #999;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+.pers{
+    display: flex;
+    align-items: center;
+    text-transform: none;
 }
 
