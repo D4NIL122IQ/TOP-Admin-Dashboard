@@ -10,7 +10,7 @@
     width: 100vw;
     display:grid;
     grid-template-columns: 250px repeat(3,1fr);
-    grid-template-rows: repeat(1,200px) repeat(4,200px);
+    grid-template-rows: repeat(1,200px) repeat(4,minmax(200px,1fr));
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -18,7 +18,7 @@
 }
 
 .side-bar{
-    background-color: #0ea5e9;
+    background-color: #0284c7;
     color: white;
     grid-row-start: 1;
     grid-row-end: 6;
@@ -27,6 +27,7 @@
 h2{
     margin-top: 20px;
     text-align: center;
+    margin-left: 10px;
 }
 
 .util{
@@ -55,7 +56,7 @@ i{
 }
 
 .top-bar{
-    background-color: #eee;
+    background-color: #e0f2fe;
     grid-row-start: 1;
     grid-column-start: 2;
     grid-column-end: 5;
@@ -77,7 +78,7 @@ i{
 
 input{
     border-radius: 30px;
-    background-color: #DDD;
+    background-color: #FFF;
     width: 50vw;
     padding: 5px 10px;
 }
@@ -87,9 +88,7 @@ input{
     align-items: stretch;
     justify-content: space-around;
 }
-.information{
-    text-transform: none;
-}
+
 .hi{
     margin-top: 30px;
 }
@@ -99,9 +98,9 @@ input{
     align-items: center;
 }
 .btn-profile{
-    background-color: #0ea5e9;
+    background-color: #0284c7;
     border-radius: 20px;
-    padding: 5px 10px;
+    padding: 8px 12px;
     box-shadow: 0px 0px 8px 0px black
 }
 .btn-profile:hover{
@@ -111,7 +110,7 @@ input{
 
 .main{
     width: 100%;
-    background-color: #AAA;
+    background-color: #f0f9ff;
     grid-column-start: 2;
     grid-column-end: 5;
     grid-row-start: 2;
@@ -121,20 +120,23 @@ input{
     display: grid;
     grid-template-columns: repeat(1,minmax(400,1fr)) 100px;
     grid-template-rows: repeat(2,400px);
-    /* grid-template: auto 1fr / 2fr minmax(300px, 1fr); */
+
 }
 .project , .anno {
     margin-top: 30px;
+    
+}
+.project{
+    margin-left: 10px;
 }
 .card-container{ 
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit , minmax(350px,1fr));
     grid-template-rows: repeat(2,200px);
     gap: 40px;
-    margin-left: 10px;
     margin-top: 10px;
 }
 
@@ -142,7 +144,7 @@ input{
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 3px 0px #0c0c0c; 
-    border-left: #fb8600 solid 10px;
+    border-left: #075985 solid 10px;
 }
 
 .text , .title{
@@ -165,7 +167,7 @@ button:hover{
 .annoucements{
     grid-column-start: 2;
     grid-row-start: 1;
-    background-color: white;
+    background-color: #FFF;
     margin-top: 10px;
     border: 1px solid black;
     border-radius: 10px;
@@ -177,15 +179,15 @@ button:hover{
 } 
 
 .text-anno{
-    padding: 6px;
+    margin: 10px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid black;
+    text-transform: none;
 }
+
 #last{
     border-bottom: none;
 }
-.text-anno{
-    border-bottom: 1px solid black;
-}
-
 
 .trending{
     grid-column-start: 2;
@@ -209,7 +211,17 @@ button:hover{
     display: flex;
     align-items: center;
     text-transform: none;
+    
 }
 .profil-add:hover , .annoucements:hover,.card:hover{
     box-shadow: 0px 4px 20px black;
+}
+
+.text,.information
+{
+    text-transform: none;
+}
+
+H3{
+    font-size: 1.2rem;
 }
